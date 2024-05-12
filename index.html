@@ -26,7 +26,7 @@
 <body class="row vw-100 g-0">
     <!--Aside portion-->
     <aside class="col-12 col-md-3">
-        <div class="col-12 text-bgdark text-center py-3 aside-custom-height">
+        <div class="col-12 text-bg-dark text-center py-3 aside-custom-height">
             <h2 class="pt-3">Search for<br/>a city:</h2>
             <input id="searchInput" class="col-14 mt-4 squared" placeholder="Search Here"/>
             <button id="searchBtn" class="col-14 mt-3 text-bg-primary rounded">Search</button>
@@ -41,7 +41,7 @@
         <h2 class="text-center p-2">Current Weather</h2>
         <!--creates card for current weather card-->
         <article class="row col-12 g-0 justify-content-center">
-            <div class="card col-9 text-bgdark">
+            <div class="card col-9 text-bg-dark">
                 <div class="card-body">
                     <h5 class="card-title"><span id="currentCity">, Today</span></h5>
                     <p class="card-text">
@@ -53,6 +53,59 @@
            </div>
         </article>
         <h2 class="text-center p-2 m-4">5-Day Forecasat (Noon)</h2>
+        <!--5 Forecast cards-->
+        <article class="row col-12 g-0 justify-content-center">
+            <div class="card col-10 col-md-2 text-bg-dark m-1">
+             <div class="card-body">
+                <h5 id="day1Date" class="card-title text-center"></h5>
+                <p class="card-text">
+                    Temp: <span id="day1Temp"></span><br/>Wind:
+                    <span id="day1Wind"></span><br/>Humidity:
+                    <span id="day1Humidity"></span>
+                </p>
+            </div> 
+        </div>
+        <div class="card col-10 col-md-2 text-bg-dark m-1">
+            <div class="card-body">
+                <h5 id="day2Date" class="card-title text-center"></h>
+                <p class="card-text">
+                    Temp: <span id="day2Temp"></span><br/>Wind:
+                    <span id="day2Wind"></span><br/>Humidity:
+                    <span id="day2Humidity"></span>
+                </p>
+            </div> 
+        </div>
+        <div class="card col-10 col-md-2 text-bg-dark m-1">
+        <div class="card-body">
+            <h5 id="day3Date" class="card-title text-center"></h5>
+            <p class="card-text">
+                Temp: <span id="day3Temp"></span><br/>Wind:
+                <span id="day3Wind"></span><br/>Humidity:
+                <span id="day3Humidity"></span>
+            </p>
+        </div> 
+    </div>
+    <div class="card col-10 col-md-2 text-bg-dark m-1">
+        <div class="card-body">
+            <h5 id="day4Date" class="card-title text-center"></h5>
+            <p class="card-text">
+                Temp: <span id="day4Temp"></span><br/>Wind:
+                <span id="day4Wind"></span><br/>Humidity:
+                <span id="day4Humidity"></span>
+            </p>
+        </div> 
+    </div>
+    <div class="card col-10 col-md-2 text-bg-dark m-1">
+        <div class="card-body">
+            <h5 id="day5Date" class="card-title text-center"></h5>
+            <p class="card-text">
+                Temp: <span id="day5Temp"></span><br/>Wind:
+                <span id="day5Wind"></span><br/>Humidity:
+                <span id="day5Humidity"></span>
+            </p>
+        </div> 
+    </div>
+</article>
     </main>
 </body>
 </html>
