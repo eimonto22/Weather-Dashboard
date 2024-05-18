@@ -14,3 +14,18 @@ if (cityListStored !== null){
 
 // allows user's inputs to assign the city as the 1st array on the list
 var cities = cityList[0];
+
+// Fills the city llist with data
+function cityListIntoCityList(){
+    //deltes html elm inside of citylist and fills with data in a loop
+    $("#city").empty();
+    //creates a new list item in the citylist
+    for (i = 0; i < cityList.length; i++) {
+        var newCity = $("<li></li>");
+        newCity.text(cityList[i]);
+        newCity.addClass("list-group-item list-group-item-action cityItem");
+        $("cityList").append(newCity);
+    }
+}
+
+// Fetches the OpenWeatherapi
