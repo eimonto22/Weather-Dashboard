@@ -64,17 +64,17 @@ return (
 // Fetches the Open Weather Forecast API.
 function fetchDisplayForecast() {
     fetch(
-      "http://api.openweathermap.org/data/2.5/forecast?q=" +
+    "http://api.openweathermap.org/data/2.5/forecast?q=" +
         city +
         "&appid=" +
         openWeatherAPI +
         "&units=imperial"
     )
       // Creates a JSON file of the data.
-      .then(function (response) {
+    .then(function (response) {
         return response.json();
-      })
-      .then(function (data) {
+    })
+    .then(function (data) {
         for (var i = 1; i < 6; i++) {
             var date = new Date(data.list[(i - 1) * 8 + 4].dt_txt),
             month = date.getMonth() + 1,
@@ -84,24 +84,26 @@ function fetchDisplayForecast() {
             //hopfully changes emojis based on weather
             if (data.list[(i - 1) * 8 + 4].weather[0].main === "Clouds") {
                 $("#day" + i + "Date").append(" ☁️");
-              }
+            }
               if (data.list[(i - 1) * 8 + 4].weather[0].main === "Clear") {
                 $("#day" + i + "Date").append(" ☀️");
-              }
+            }
               if (data.list[(i - 1) * 8 + 4].weather[0].main === "Rain") {
                 $("#day" + i + "Date").append(" 🌧️");
-              }
+            }
               if (data.list[(i - 1) * 8 + 4].weather[0].main === "Snow") {
                 $("#day" + i + "Date").append(" ❄️");
-              }
+            }
               // Rounds the temperature and wind speed to the nearest whole number and adds proper unit symobls.
               var TempRounded = Math.round(data.list[(i - 1) * 8 + 4].main.temp);
-              $("#day" + i + "Temp").text(TempRounded + "°F");
+            $("#day" + i + "Temp").text(TempRounded + "°F");
               var WindRounded = Math.round(data.list[(i - 1) * 8 + 4].wind.speed);
-              $("#day" + i + "Wind").text(WindRounded + " MPH");
-              $("#day" + i + "Humidity").text(
+            $("#day" + i + "Wind").text(WindRounded + " MPH");
+            $("#day" + i + "Humidity").text(
                 data.list[(i - 1) * 8 + 4].main.humidity + "%"
-              );
+            );
         }
     });
-      }
+    }
+
+    
